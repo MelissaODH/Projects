@@ -1,2 +1,2 @@
 # NLP-project
-Ce script est conçu pour analyser et extraire des n-grammes pertinents à partir d'un ensemble de données contenant des noms de produits. 
+Ce script est conçu pour analyser et extraire des n-grammes pertinents à partir d'un ensemble de données contenant des noms de produits. Le script utilise plusieurs bibliothèques dont “pandas” qui offre des structures de données flexibles et permet de travailler facilement avec des données structurées, “nltk” qui fournit des outils pour travailler avec le texte humain, tels que la tokenisation, la suppression des mots vides, la génération de n-grammes, etc., “re” utilisée pour la manipulation de chaînes de caractères, “itertools”qui fournit des fonctions pour créer des itérateurs pour des boucles efficaces.

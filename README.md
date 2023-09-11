@@ -8,7 +8,7 @@ N'hésitez pas à explorer les différents dossiers et projets répertoriés ici
 
 Si vous souhaitez en savoir plus sur l'un de ces projets, n'hésitez pas à me contacter :
 
-- Adresse e-mail : [melissa.oaudah.0m@gmail.com]
+- Adresse e-mail : [melissa.ouadah.0m@gmail.com]
 - Profil LinkedIn : [https://www.linkedin.com/in/leilamelissaouadah/]
 
 Je suis enthousiaste à l'idée de travailler sur de nouveaux projets passionnants et de contribuer à des équipes talentueuses. Merci de prendre le temps de parcourir mon portfolio !

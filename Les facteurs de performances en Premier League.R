@@ -11,7 +11,7 @@ summary(df)
 attach(df)
 
 
-##Découpage des saisons##
+##DÃ©coupage des saisons##
 df2122 <- subset(df, df$annee == "2021-2022")
 df2021 <- subset(df, df$annee == "2020-2021")
 df1920 <- subset(df, df$annee == "2019-2020")
@@ -73,7 +73,7 @@ ggplot(data=df1819, aes(x=moy_affluence, y=reorder(club, - classement),  fill = 
 
 
 
-##Graph sur le nombre de championnats gagnés en fonction du nombre de points
+##Graph sur le nombre de championnats gagnÃ©s en fonction du nombre de points
 df2122$point <- as.numeric(df2122$point)
 class(df2122$championnats)
 df2122$championnats <- as.numeric(df2122$championnats)
@@ -81,32 +81,32 @@ df2122$championnats <- as.numeric(df2122$championnats)
 
 
 ggplot(data=df2122, aes(y=championnats, x=reorder(classement, - point),  fill = as.ordered( - championnats))) +
-  geom_bar(stat="identity") + ggtitle("Classement 21/22 en fonction du nombre de championnats gagnés") + 
+  geom_bar(stat="identity") + ggtitle("Classement 21/22 en fonction du nombre de championnats gagnÃ©s") + 
   scale_fill_grey()
 
 ggplot(data=df2021, aes(y=championnats, x=reorder(classement, - point),  fill = as.ordered( - championnats))) +
-  geom_bar(stat="identity") + ggtitle("Classement 20/21 en fonction du nombre de championnats gagnés") + 
+  geom_bar(stat="identity") + ggtitle("Classement 20/21 en fonction du nombre de championnats gagnÃ©s") + 
   scale_fill_grey()
 
 ggplot(data=df1920, aes(y=championnats, x=reorder(classement, - point),  fill = as.ordered( - championnats))) +
-  geom_bar(stat="identity") + ggtitle("Classement 19/20 en fonction du nombre de championnats gagnés") + 
+  geom_bar(stat="identity") + ggtitle("Classement 19/20 en fonction du nombre de championnats gagnÃ©s") + 
   scale_fill_grey()
 
 ggplot(data=df1819, aes(y=championnats, x=reorder(classement, - point),  fill = as.ordered( - championnats))) +
-  geom_bar(stat="identity") + ggtitle("Classement 18/19 en fonction du nombre de championnats gagnés") +
+  geom_bar(stat="identity") + ggtitle("Classement 18/19 en fonction du nombre de championnats gagnÃ©s") +
   scale_fill_grey()
 
 
 
 ggplot(data=df1819, aes(y=championnats, x=reorder(classement, - point),  fill = as.ordered( - championnats))) +
-  geom_bar(stat="identity") + ggtitle("Classement 18/19 en fonction du nombre de championnats gagnés") +
+  geom_bar(stat="identity") + ggtitle("Classement 18/19 en fonction du nombre de championnats gagnÃ©s") +
   scale_fill_grey()
 
 
 barplot(championnats ~ point, data = df2122,
-     main= "Graph sur le nombre de championnats gagnés en fonction du nombre de points",
+     main= "Graph sur le nombre de championnats gagnÃ©s en fonction du nombre de points",
      xlab= "Points",
-     ylab= "Championnats gagnés",
+     ylab= "Championnats gagnÃ©s",
      col= "blue", pch = 19, lty = "solid", lwd = 2)
 text(labels=club, cex= 0.8)
 
@@ -121,7 +121,7 @@ p
 
 
 
-##Graph sur la valeur marché
+##Graph sur la valeur marchÃ©
 df2122$total_valeur_marche <- as.numeric(df2122$total_valeur_marche)
 
 ggplot(data=df2122, aes(x=moy_valeur_marche, y=reorder(club, - classement), fill = as.ordered(classement))) +
@@ -200,12 +200,12 @@ ggplot(data=df1920, aes(x=moy_affluence, y=reorder(club, - classement),  fill = 
 
 
 
-###Effectif par classsement d'équipe
+###Effectif par classsement d'Ã©quipe
 
 ggplot(data=df, aes(fill=effectif, y=effectif, x=classement)) + 
   geom_bar(position="dodge", stat="identity") +
   scale_fill_gradient(low="lightblue", high="darkblue") +
-  ggtitle("Effectif par classement d'équipe") +
+  ggtitle("Effectif par classement d'Ã©quipe") +
   facet_wrap(~annee) +
   theme(legend.position="none") +
   xlab("Classement") +
@@ -219,7 +219,7 @@ ggplot(data=df, aes(fill=effectif, y=effectif, x=classement)) +
 ggplot(df, aes(fill=moy_age, y=moy_age, x=classement)) + 
   geom_bar(position="dodge", stat="identity") +
   scale_fill_gradient(low="cyan", high="darkblue") +
-  ggtitle("Moyenne d'age par classement d'équipe") +
+  ggtitle("Moyenne d'age par classement d'Ã©quipe") +
   facet_wrap(~annee) +
   theme(legend.position="none") +
   xlab("Classement") +
@@ -228,16 +228,16 @@ ggplot(df, aes(fill=moy_age, y=moy_age, x=classement)) +
 
 
 
-#####Nombre d'étranger
+#####Nombre d'Ã©tranger
 
 ggplot(df, aes(fill=nbr_etrangers, y=nbr_etrangers, x=classement)) + 
   geom_bar(position="dodge", stat="identity") +
   scale_fill_gradient(low="cadetblue1", high="darkblue") +
-  ggtitle("Nombre d'étrangers par classement d'équipe") +
+  ggtitle("Nombre d'Ã©trangers par classement d'Ã©quipe") +
   facet_wrap(~annee) +
   theme(legend.position="none") +
   xlab("Classement") +
-  ylab("Nombre d'étrangers")
+  ylab("Nombre d'Ã©trangers")
 
 
 
@@ -248,16 +248,16 @@ ggplot(df, aes(fill=nbr_etrangers, y=nbr_etrangers, x=classement)) +
 df2$classement <- 21 - df2$classement
 
 library(dplyr)
-df2_num <- select_if(df2, is.numeric) # Sélectionne les colonnes numériques
-correlation <- cor(df2_num) # Calcule la matrice de corrélation des colonnes numériques
+df2_num <- select_if(df2, is.numeric) # SÃ©lectionne les colonnes numÃ©riques
+correlation <- cor(df2_num) # Calcule la matrice de corrÃ©lation des colonnes numÃ©riques
 
-#Créer une matrice de corrélation
+#CrÃ©er une matrice de corrÃ©lation
 correlation <- cor(df2_num, use="complete.obs", method="pearson")
 
-#Afficher la matrice de corrélation
+#Afficher la matrice de corrÃ©lation
 print(correlation)
 
-#Visualisation de la matrice de corrélation
+#Visualisation de la matrice de corrÃ©lation
 library(corrplot)
 corrplot(correlation, method = "color", type = "upper", order = "hclust", tl.col="black", tl.srt=45)
 
@@ -269,9 +269,9 @@ corrplot(correlation, method = "color", type = "upper", order = "hclust", tl.col
 df2$classement <- 21 - df2$classement 
 
 res.FAMD<-FAMD(df2,graph=FALSE)
-plot.FAMD(res.FAMD,title="Graphe des individus et des modalités")
+plot.FAMD(res.FAMD,title="Graphe des individus et des modalitÃ©s")
 plot.FAMD(res.FAMD,axes=c(1,2),choix='var',title="Graphe des variables")
-plot.FAMD(res.FAMD, choix='quanti',title="Cercle des corrélations")
+plot.FAMD(res.FAMD, choix='quanti',title="Cercle des corrÃ©lations")
 
 
 get_eigenvalue(res)
@@ -283,7 +283,7 @@ contrib_var
 
 
 
-###Régression Linéaire###
+###RÃ©gression LinÃ©aire###
 
 anova(reg1, test="Chisq")
 
@@ -297,27 +297,27 @@ summary(fit)
 #Step
 step(fit)
 
-##Meilleur modèle après Step
+##Meilleur modÃ¨le aprÃ¨s Step
 fit <- lm(formula = point ~ effectif + moy_valeur_marche + total_valeur_marche + 
             diff_but + championnats, data = df)
 
-# Analyse de variance (ANOVA) pour vérifier l'importance de chaque variable dans le modèle de régression
+# Analyse de variance (ANOVA) pour vÃ©rifier l'importance de chaque variable dans le modÃ¨le de rÃ©gression
 anova(fit)
 
-# Test de normalité pour vérifier si les résidus suivent une distribution normale
+# Test de normalitÃ© pour vÃ©rifier si les rÃ©sidus suivent une distribution normale
 shapiro.test(residuals(fit))
 
 
-#Graphique résiduel
-plot(fit$residuals, main="Résidus du modèle", ylab="Résidus", xlab="Observation Number")
+#Graphique rÃ©siduel
+plot(fit$residuals, main="RÃ©sidus du modÃ¨le", ylab="RÃ©sidus", xlab="Observation Number")
 abline(h=0, col="red")
 
 
 
-###Prédictions###
+###PrÃ©dictions###
 
 
-#Ajout de l'année 2023
+#Ajout de l'annÃ©e 2023
 df_2023 <- data.frame(
   club = c("Manchester City", "Chelsea FC", "Arsenal FC", "FC Liverpool", "Manchester United", 
                 "Tottenham Hotspur", "Newcastle United", "West Ham United", "Leicester City", 
@@ -335,30 +335,30 @@ df_2023 <- data.frame(
 print(df_2023)
 
 
-# Ajout des colonnes pour 'diff_but_2023' et 'meilleur_buteur_2023' à df_2023
-df_2023$diff_but <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) # remplacez par les valeurs réelles
-df_2023$meilleur_buteur <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) # remplacez par les valeurs réelles
+# Ajout des colonnes pour 'diff_but_2023' et 'meilleur_buteur_2023' Ã  df_2023
+df_2023$diff_but <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) # remplacez par les valeurs rÃ©elles
+df_2023$meilleur_buteur <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) # remplacez par les valeurs rÃ©elles
 
 df_2023$championnats <- c(8, 6, 13, 19, 20, 2, 4, 0, 1, 7, 3, 0, 0, 9, 0, 0, 3, 0, 0, 0)
 
-# Prédictions pour 2023
+# PrÃ©dictions pour 2023
 predictions_2023 <- predict(fit, newdata = df_2023)
 
-# ajout les prédictions à df_2023
+# ajout les prÃ©dictions Ã  df_2023
 df_2023$predictions_2023 <- predictions_2023
 
 print(df_2023)
 
-# Trouve l'équipe avec la prédiction la plus élevée
+# Trouve l'Ã©quipe avec la prÃ©diction la plus Ã©levÃ©e
 equipe_max_points <- df_2023$club_2023[which.max(df_2023$predictions_2023)]
 
-# Affiche l'équipe
-print(paste("L'équipe qui aura le plus de points en 2023 est :", equipe_max_points))
+# Affiche l'Ã©quipe
+print(paste("L'Ã©quipe qui aura le plus de points en 2023 est :", equipe_max_points))
 
-# Trie le DataFrame par les prédictions des points dans un ordre décroissant
+# Trie le DataFrame par les prÃ©dictions des points dans un ordre dÃ©croissant
 df_2023_sorted <- df_2023[order(-df_2023$predictions_2023),]
 
-# Crée une nouvelle colonne pour le classement
+# CrÃ©e une nouvelle colonne pour le classement
 df_2023_sorted$classement_2023 <- 1:nrow(df_2023_sorted)
 
 # Affiche le DataFrame

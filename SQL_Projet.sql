@@ -1,7 +1,7 @@
 
 /*PROJET N°1 SQL
-
-       
+  Analyse des données de paiements et segmentation des clients 
+*/
 
 /*Question 1*/
 DROP TABLE IF EXISTS `payments2`;

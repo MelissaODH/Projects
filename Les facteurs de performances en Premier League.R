@@ -2,12 +2,10 @@
 
 
 library(readr)
-df<- read.csv("C:/Users/ryanm/Downloads/Laurent soulat table - Tableaux final.csv", sep=",")
+df<- read.csv("Tableaux final.csv", sep=",")
 View(df)
 summary(df)
-##library(readxl)
-##Laurent_Soulat_table_Tableaux_final <- read_excel("C:/Users/ryanm/Downloads/Laurent soulat table - Tableaux final.csv")
-##View(Laurent_soulat_table_Tableaux_final)
+
 
 
 

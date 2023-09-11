@@ -1,3 +1,7 @@
+##En utilisant des techniques d'analyse économétrique, nous allons tenter de déterminer les
+facteurs qui ont le plus d'impact sur la performance des équipes en Premier League.
+
+
 library(readr)
 df<- read.csv("C:/Users/ryanm/Downloads/Laurent soulat table - Tableaux final.csv", sep=",")
 View(df)

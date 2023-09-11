@@ -1,8 +1,6 @@
 
 /*PROJET N°1 SQL
-    - Ouadah Leila Melissa
-    - Lysa Meghnine 
-    M1 BIDABI
+
        
 
 /*Question 1*/
